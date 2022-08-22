@@ -36,7 +36,7 @@
         "name": "send response",
         "bot": "54d5b7368256aa29",
         "x": 480,
-        "y": 60,
+        "y": 80,
         "wires": [
             []
         ]
@@ -53,7 +53,7 @@
         "finalize": "",
         "libs": [],
         "x": 260,
-        "y": 60,
+        "y": 80,
         "wires": [
             [
                 "39685febe5b63fd8"
@@ -69,7 +69,7 @@
         "bot": "54d5b7368256aa29",
         "strict": false,
         "hasresponse": false,
-        "x": 70,
+        "x": 90,
         "y": 160,
         "wires": [
             [
@@ -89,7 +89,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 260,
+        "x": 300,
         "y": 160,
         "wires": [
             [
@@ -103,7 +103,7 @@
         "z": "2a676f6058e1fe7c",
         "name": "send response",
         "bot": "54d5b7368256aa29",
-        "x": 480,
+        "x": 560,
         "y": 160,
         "wires": [
             []
@@ -119,12 +119,46 @@
         "strict": false,
         "hasresponse": true,
         "x": 90,
-        "y": 60,
+        "y": 80,
         "wires": [
             [
                 "dbc493a6ba787577"
             ],
             []
         ]
+    },
+    {
+        "id": "141e9f075ae73c14",
+        "type": "ping",
+        "z": "2a676f6058e1fe7c",
+        "protocol": "IPv4",
+        "mode": "timed",
+        "name": "keep-alive",
+        "host": "http://127.0.0.1:1880/",
+        "timer": "20",
+        "inputs": 0,
+        "x": 100,
+        "y": 20,
+        "wires": [
+            [
+                "6792f602e609cc5f"
+            ]
+        ]
+    },
+    {
+        "id": "6792f602e609cc5f",
+        "type": "debug",
+        "z": "2a676f6058e1fe7c",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 260,
+        "y": 20,
+        "wires": []
     }
 ]

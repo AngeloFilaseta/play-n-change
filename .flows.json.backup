@@ -1,11 +1,10 @@
 [
     {
-        "id": "84a72cfc25777d96",
+        "id": "2a676f6058e1fe7c",
         "type": "tab",
-        "label": "Flow 1",
+        "label": "Flow",
         "disabled": false,
-        "info": "",
-        "env": []
+        "info": ""
     },
     {
         "id": "54d5b7368256aa29",
@@ -29,5 +28,137 @@
         "useselfsignedcertificate": false,
         "sslterminated": false,
         "verboselogging": false
+    },
+    {
+        "id": "39685febe5b63fd8",
+        "type": "telegram sender",
+        "z": "2a676f6058e1fe7c",
+        "name": "send response",
+        "bot": "54d5b7368256aa29",
+        "x": 480,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dbc493a6ba787577",
+        "type": "function",
+        "z": "2a676f6058e1fe7c",
+        "name": "function 1",
+        "func": "var message = msg.payload;\nmsg.payload = {}\nmsg.payload.chatId = -1001618961389\nmsg.payload.type = 'message'\nmsg.payload.content = 'Want to work with us? DM  @Segaiolo for more informations';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 260,
+        "y": 80,
+        "wires": [
+            [
+                "39685febe5b63fd8"
+            ]
+        ]
+    },
+    {
+        "id": "a21b0b95ceb05005",
+        "type": "telegram command",
+        "z": "2a676f6058e1fe7c",
+        "name": "/social",
+        "command": "/social",
+        "bot": "54d5b7368256aa29",
+        "strict": false,
+        "hasresponse": false,
+        "x": 90,
+        "y": 160,
+        "wires": [
+            [
+                "68a41584caf579c7"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "68a41584caf579c7",
+        "type": "function",
+        "z": "2a676f6058e1fe7c",
+        "name": "create help text",
+        "func": "var message = msg.payload;\nmsg.payload = {}\nmsg.payload.chatId = -1001618961389\nmsg.payload.type = 'message'\nmsg.payload.content = 'follow us on https://www.instagram.com/playnchange/!'\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 160,
+        "wires": [
+            [
+                "1b460e20e7c246a2"
+            ]
+        ]
+    },
+    {
+        "id": "1b460e20e7c246a2",
+        "type": "telegram sender",
+        "z": "2a676f6058e1fe7c",
+        "name": "send response",
+        "bot": "54d5b7368256aa29",
+        "x": 560,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e39a0efacab85a91",
+        "type": "telegram command",
+        "z": "2a676f6058e1fe7c",
+        "name": "/job",
+        "command": "/job",
+        "bot": "54d5b7368256aa29",
+        "strict": false,
+        "hasresponse": true,
+        "x": 90,
+        "y": 80,
+        "wires": [
+            [
+                "dbc493a6ba787577"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "141e9f075ae73c14",
+        "type": "ping",
+        "z": "2a676f6058e1fe7c",
+        "protocol": "IPv4",
+        "mode": "timed",
+        "name": "keep-alive",
+        "host": "http://127.0.0.1:1880/",
+        "timer": "20",
+        "inputs": 0,
+        "x": 100,
+        "y": 20,
+        "wires": [
+            [
+                "6792f602e609cc5f"
+            ]
+        ]
+    },
+    {
+        "id": "6792f602e609cc5f",
+        "type": "debug",
+        "z": "2a676f6058e1fe7c",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 260,
+        "y": 20,
+        "wires": []
     }
 ]
