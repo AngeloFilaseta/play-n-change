@@ -1,3 +1,3 @@
-# repository-template
+# play-n-change
 
-Repository Template with a ready ``.gitattributes`` and a ready [pre-commit configuration](https://pre-commit.com/hooks.html).
+A Telegram Bot for the management of the [Play'n Change website](https://www.playnchange.com/).
