@@ -1,8 +1,13 @@
 {
     "name": "play-n-change-tg-bot",
-    "description": "A Node-RED Project",
+    "description": "A Telegram Bot for the management of the Play'n Change website.",
     "version": "0.0.1",
-    "dependencies": {},
+    "dependencies": {
+        "node-red": "*"
+    },
+    "scripts": {
+        "start": "node-red --settings ./settings.js --userDir ./"
+    },
     "node-red": {
         "settings": {
             "flowFile": "flows.json",

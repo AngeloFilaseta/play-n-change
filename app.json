@@ -1,0 +1,7 @@
+{
+    "name": "Play 'n Change Telegram Bot",
+    "description": "A Telegram Bot for the management of the Play'n Change website.",
+    "repository": "https://github.com/AngeloFilaseta/play-n-change-tg-bot",
+    "keywords": ["node", "node-red"],
+    "image": "heroku/nodejs"
+}
