@@ -1,0 +1,130 @@
+[
+    {
+        "id": "2a676f6058e1fe7c",
+        "type": "tab",
+        "label": "Flow",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "54d5b7368256aa29",
+        "type": "telegram bot",
+        "botname": "PlaynChange_bot",
+        "usernames": "",
+        "chatids": "-1001618961389",
+        "baseapiurl": "",
+        "updatemode": "polling",
+        "pollinterval": "300",
+        "usesocks": false,
+        "sockshost": "",
+        "socksport": "6667",
+        "socksusername": "anonymous",
+        "sockspassword": "",
+        "bothost": "",
+        "localbotport": "8443",
+        "publicbotport": "8443",
+        "privatekey": "",
+        "certificate": "",
+        "useselfsignedcertificate": false,
+        "sslterminated": false,
+        "verboselogging": false
+    },
+    {
+        "id": "39685febe5b63fd8",
+        "type": "telegram sender",
+        "z": "2a676f6058e1fe7c",
+        "name": "send response",
+        "bot": "54d5b7368256aa29",
+        "x": 480,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dbc493a6ba787577",
+        "type": "function",
+        "z": "2a676f6058e1fe7c",
+        "name": "function 1",
+        "func": "var message = msg.payload;\nmsg.payload = {}\nmsg.payload.chatId = -1001618961389\nmsg.payload.type = 'message'\nmsg.payload.content = 'Want to work with us? DM  @Segaiolo for more informations';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 260,
+        "y": 60,
+        "wires": [
+            [
+                "39685febe5b63fd8"
+            ]
+        ]
+    },
+    {
+        "id": "a21b0b95ceb05005",
+        "type": "telegram command",
+        "z": "2a676f6058e1fe7c",
+        "name": "/social",
+        "command": "/social",
+        "bot": "54d5b7368256aa29",
+        "strict": false,
+        "hasresponse": false,
+        "x": 70,
+        "y": 160,
+        "wires": [
+            [
+                "68a41584caf579c7"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "68a41584caf579c7",
+        "type": "function",
+        "z": "2a676f6058e1fe7c",
+        "name": "create help text",
+        "func": "var message = msg.payload;\nmsg.payload = {}\nmsg.payload.chatId = -1001618961389\nmsg.payload.type = 'message'\nmsg.payload.content = 'follow us on https://www.instagram.com/playnchange/!'\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 260,
+        "y": 160,
+        "wires": [
+            [
+                "1b460e20e7c246a2"
+            ]
+        ]
+    },
+    {
+        "id": "1b460e20e7c246a2",
+        "type": "telegram sender",
+        "z": "2a676f6058e1fe7c",
+        "name": "send response",
+        "bot": "54d5b7368256aa29",
+        "x": 480,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e39a0efacab85a91",
+        "type": "telegram command",
+        "z": "2a676f6058e1fe7c",
+        "name": "/job",
+        "command": "/job",
+        "bot": "54d5b7368256aa29",
+        "strict": false,
+        "hasresponse": true,
+        "x": 90,
+        "y": 60,
+        "wires": [
+            [
+                "dbc493a6ba787577"
+            ],
+            []
+        ]
+    }
+]
