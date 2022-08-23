@@ -35,6 +35,7 @@
         "z": "2a676f6058e1fe7c",
         "name": "send response",
         "bot": "54d5b7368256aa29",
+        "outputs": 1,
         "x": 480,
         "y": 80,
         "wires": [
@@ -69,6 +70,7 @@
         "bot": "54d5b7368256aa29",
         "strict": false,
         "hasresponse": false,
+        "outputs": 2,
         "x": 90,
         "y": 160,
         "wires": [
@@ -103,6 +105,7 @@
         "z": "2a676f6058e1fe7c",
         "name": "send response",
         "bot": "54d5b7368256aa29",
+        "outputs": 1,
         "x": 560,
         "y": 160,
         "wires": [
@@ -118,6 +121,7 @@
         "bot": "54d5b7368256aa29",
         "strict": false,
         "hasresponse": true,
+        "outputs": 2,
         "x": 90,
         "y": 80,
         "wires": [
@@ -135,30 +139,28 @@
         "mode": "timed",
         "name": "keep-alive",
         "host": "https://play-n-change-tg-bot.herokuapp.com/",
-        "timer": "20",
+        "timer": "900",
         "inputs": 0,
         "x": 100,
         "y": 20,
         "wires": [
-            [
-                "6792f602e609cc5f"
-            ]
+            []
         ]
     },
     {
-        "id": "6792f602e609cc5f",
-        "type": "debug",
+        "id": "1c78dc7f5467a2c7",
+        "type": "ping",
         "z": "2a676f6058e1fe7c",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
+        "protocol": "IPv4",
+        "mode": "timed",
+        "name": "keep-alive",
+        "host": "https://vocabolangelo.herokuapp.com/",
+        "timer": "900",
+        "inputs": 0,
         "x": 260,
         "y": 20,
-        "wires": []
+        "wires": [
+            []
+        ]
     }
 ]
