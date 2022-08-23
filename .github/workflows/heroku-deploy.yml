@@ -9,11 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Run script file
-        run: |
-          chmod +x ./flows_cred_generate.sh
-          ./flows_cred_generate.sh ${{secrets.TELEGRAM_API_TOKEN}}
-        shell: bash
       - uses: akhileshns/heroku-deploy@v3.12.12
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
