@@ -134,7 +134,7 @@
         "protocol": "IPv4",
         "mode": "timed",
         "name": "keep-alive",
-        "host": "http://127.0.0.1:1880/",
+        "host": "https://play-n-change-tg-bot.herokuapp.com/",
         "timer": "20",
         "inputs": 0,
         "x": 100,
