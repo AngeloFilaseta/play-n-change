@@ -9,7 +9,7 @@
     },
     "scripts": {
         "start": "node-red --settings ./settings.js --userDir ./",
-        "postinstall": "flows_cred_generate.sh"
+        "postinstall": "./flows_cred_generate.sh"
     },
     "node-red": {
         "settings": {
