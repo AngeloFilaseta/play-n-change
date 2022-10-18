@@ -3,7 +3,7 @@
     "description": "A Telegram Bot for the management of the Play'n Change website.",
     "version": "0.0.1",
     "dependencies": {
-        "node-red": "*",
+        "node-red": "3.0.2",
         "node-red-contrib-telegrambot": "14.0.0",
         "node-red-node-ping": "0.3.3"
     },
